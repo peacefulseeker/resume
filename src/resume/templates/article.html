@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="resume">
+    <h1><a href="{{ SITEURL }}/">{{ AUTHOR }}</a></h1>
+
+    <article>
+        <h2>{{ article.title }}</h2>
+        <div class="article-content">
+            {{ article.content }}
+        </div>
+    </article>
+
+    <nav style="margin-top: 2em;">
+        <a href="{{ SITEURL }}/">&larr; Back to Resume</a>
+    </nav>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{ AUTHOR }} - {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="resume">
+    {% if PROFILE_IMAGE %}
+    <div class="profile-image">
+        <img src="{{ SITEURL }}/{{ PROFILE_IMAGE }}" alt="{{ AUTHOR }}">
+    </div>
+    {% endif %}
+
+    <h1>{{ AUTHOR }}, {{ PROFILE_TITLE }}</h1>
+
+    {% for article in articles|sort(attribute='date') %}
+        <article>
+            {% if article.category.name != 'hidden' %}
+            <h2>{{ article.title }}</h2>
+            <div class="article-content">
+                {{ article.content }}
+            </div>
+            {% endif %}
+        </article>
+    {% endfor %}
+
+    <div class="contact-sidebar">
+        <h3>Contact Details</h3>
+        {% if CONTACT_LOCATION %}
+        <div class="contact-item"><strong>Location:</strong> {{ CONTACT_LOCATION }}</div>
+        {% endif %}
+        {% if CONTACT_PHONE %}
+        <div class="contact-item"><strong>Phone:</strong> {{ CONTACT_PHONE }}</div>
+        {% endif %}
+        {% if CONTACT_EMAIL %}
+        <div class="contact-item"><strong>Email:</strong> <a href="mailto:{{ CONTACT_EMAIL }}">{{ CONTACT_EMAIL }}</a></div>
+        {% endif %}
+
+        {% if SOCIAL_LINKS %}
+        <h3>Links</h3>
+        {% for name, url in SOCIAL_LINKS %}
+        <div class="contact-item"><a href="{{ url }}" target="_blank">{{ name }}</a></div>
+        {% endfor %}
+        {% endif %}
+
+        {% if TECHNOLOGIES %}
+        <h3>Technologies</h3>
+        <div class="contact-item">{{ TECHNOLOGIES }}</div>
+        {% endif %}
+
+        {% if LANGUAGES %}
+        <h3>Languages</h3>
+        {% for lang in LANGUAGES %}
+        <div class="contact-item">{{ lang }}</div>
+        {% endfor %}
+        {% endif %}
+
+        {% if HOBBIES %}
+        <h3>Hobbies</h3>
+        <div class="contact-item">{{ HOBBIES }}</div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
