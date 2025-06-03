@@ -1,0 +1,199 @@
+/* Resume Theme CSS - based on CV HTML file */
+html {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Profile image */
+.profile-image {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact sidebar styling */
+.contact-sidebar {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 4px;
+    margin: 1em 0;
+}
+
+.contact-sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.contact-item {
+    margin: 0.5em 0;
+}
+
+/* Links */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    padding-left: 1.5em;
+    margin: 1em 0;
+}
+
+li {
+    margin: 0.5em 0;
+    line-height: 1.4;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Figures */
+figure {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+figcaption {
+    color: #666;
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Code blocks */
+pre {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    padding: 1em;
+    overflow: auto;
+}
+
+code {
+    font-family: monospace;
+    background-color: #f6f8fa;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Tech stack styling */
+.tech-stack {
+    background-color: #f6f8fa;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    margin: 1em 0;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Article content */
+.article-content {
+    margin-bottom: 2em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Print styles */
+@media print {
+    html {
+        background-color: white;
+    }
+
+    body {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-sidebar {
+        background-color: transparent;
+        border: 1px solid #ddd;
+    }
+}
