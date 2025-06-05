@@ -9,3 +9,7 @@ dependencies = [
     "ghp-import>=2.1.0",
     "invoke>=2.2.0",
 ]
+
+
+[tool.uv]
+required-version = ">=0.6.0"
