@@ -5,14 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12.9"
 dependencies = [
-    "accelerate>=1.7.0",
-    "docling>=2.34.0",
-    "mlx-vlm>=0.0.14",
     "pelican[markdown]>=4.11.0",
-]
-
-[dependency-groups]
-dev = [
     "ghp-import>=2.1.0",
     "invoke>=2.2.0",
 ]
+
+
+[tool.uv]
+required-version = ">=0.6.0"
