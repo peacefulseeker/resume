@@ -13,7 +13,7 @@ THEME = "resume"
 
 # Resume-specific settings
 PROFILE_TITLE = "Software Engineer"
-PROFILE_IMAGE = "theme/images/profile.jpg"
+PROFILE_IMAGE = "profile.jpg"
 CONTACT_LOCATION = "Latvia"
 CONTACT_PHONE = ""
 CONTACT_EMAIL = ""

@@ -1,7 +1,7 @@
-Title: Profile
+Title: Professional Summary
 Date: 2024-01-01
 Category: resume
-Slug: profile
+Slug: summary
 
 A detail-oriented, results-driven full stack developer with 6+ years of experience in a software engineering environment.
 
