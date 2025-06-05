@@ -2,9 +2,8 @@ name: Deploy Resume to GitHub Pages
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, updates ]  # Added 'updates' for testing
   pull_request:
-    branches: [ dev ]
 
 permissions:
   contents: read
@@ -46,7 +45,7 @@ jobs:
         path: './src/output'
 
   deploy:
-    # if: github.ref == 'refs/heads/dev'
+    if: github.event_name == 'push'  # Deploy on any push (for testing)
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
