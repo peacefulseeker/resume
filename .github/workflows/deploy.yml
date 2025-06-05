@@ -2,8 +2,9 @@ name: Deploy Resume to GitHub Pages
 
 on:
   push:
-    branches: [ dev, updates ]  # Added 'updates' for testing
+    branches: [ dev ]
   pull_request:
+    branches: [ dev ]
 
 permissions:
   contents: write
@@ -13,13 +14,13 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'  # Only deploy on push, not PR
+    if: github.event_name == 'push' && github.actor == 'peacefulseeker'
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # Fetch full history for gh-pages branch
+        fetch-depth: 0
 
     - name: Setup Python
       uses: actions/setup-python@v4
@@ -27,7 +28,7 @@ jobs:
         python-version: '3.12'
 
     - name: Install uv
-      uses: astral-sh/setup-uv@v6
+      uses: astral-sh/setup-uv@v3
 
     - name: Install dependencies
       run: uv sync
