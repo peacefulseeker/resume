@@ -68,16 +68,14 @@
 
 .timeline-container .tech-stack {
     font-size: 0.875rem;
-    margin-bottom: 1.5rem;
     margin-left: 2rem;
-    margin-top: 1.5rem;
     font-weight: 600;
     position: relative;
 }
 
 /* Employment item spacing */
 .timeline-container > h3:not(:first-child) {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 /* Extracurricular activities styling */

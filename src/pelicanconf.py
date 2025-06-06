@@ -32,7 +32,7 @@ TECHNOLOGIES = [
 ]
 
 LANGUAGES = [
-    "English", "Latvian", "Russian"
+    "English (C1)", "Latvian (C1)", "Russian (Native)"
 ]
 
 HOBBIES = [
