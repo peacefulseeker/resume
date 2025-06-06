@@ -3,7 +3,7 @@ Date: 2024-01-02
 Category: resume
 Slug: employment
 
-### Software Engineer, Arvato Systes, Latvia/Hybrid
+### Software Engineer, Arvato Systems, Latvia/Hybrid
 
 #### DECEMBER 2024 - PRESENT
 
