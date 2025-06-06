@@ -7,4 +7,4 @@ Slug: education
 
 #### 2013 - 2016
 
-Graduate paper: <a href="https://nda.rtu.lv/en/view/16218" target="_blank">https://nda.rtu.lv/en/view/16218</a>
+Graduate paper: <a href="https://nda.rtu.lv/en/view/16218" target="_blank" class="content-link">https://nda.rtu.lv/en/view/16218</a>

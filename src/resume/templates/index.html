@@ -3,61 +3,127 @@
 {% block title %}{{ AUTHOR }} - {{ SITENAME }}{% endblock %}
 
 {% block content %}
-<div class="resume">
-    {% if PROFILE_IMAGE %}
-    <div class="profile-image">
-        <img src="{{ SITEURL }}/{{ PROFILE_IMAGE }}" alt="{{ AUTHOR }}">
-    </div>
-    {% endif %}
+<div class="min-h-screen bg-resume-bg">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="flex flex-wrap gap-2">
+            <!-- Main Content Area -->
+            <div class="flex-1 min-w-0 space-y-2" style="flex: 1 1 65%;"">
+                <!-- Header -->
+                <div class="bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border">
+                    <h1 class="text-4xl font-bold text-resume-accent mb-2">{{ AUTHOR }}</h1>
+                    <p class="text-xl text-resume-secondary mb-4">{{ PROFILE_TITLE }}</p>
 
-    <h1>{{ AUTHOR }}, {{ PROFILE_TITLE }}</h1>
+                    {% for article in articles|sort(attribute='date') %}
+                        {% if article.title == 'Professional Summary' %}
+                        <div class="text-gray-700 leading-relaxed">
+                            {{ article.content }}
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
 
-    {% for article in articles|sort(attribute='date') %}
-        <article>
-            {% if article.category.name != 'hidden' %}
-            <h2>{{ article.title }}</h2>
-            <div class="article-content">
-                {{ article.content }}
+                <!-- Employment Timeline -->
+                {% for article in articles|sort(attribute='date') %}
+                    {% if article.title == 'Employment History' %}
+                    <div class="bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border">
+                        <h2 class="text-2xl font-bold text-resume-accent mb-8">
+                            Employment History
+                        </h2>
+
+                        <div class="timeline-container">
+                            {{ article.content }}
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+
+                <!-- Other Sections -->
+                {% for article in articles|sort(attribute='date') %}
+                    {% if article.title != 'Professional Summary' and article.title != 'Employment History' %}
+                    <div class="bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border">
+                        {% if article.category.name != 'hidden' %}
+                        <h2 class="text-2xl font-bold text-resume-accent mb-6">
+                            {{ article.title }}
+                        </h2>
+                        <div class="article-content text-gray-700">
+                            {{ article.content }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                {% endfor %}
             </div>
-            {% endif %}
-        </article>
-    {% endfor %}
 
-    <div class="contact-sidebar">
-        <h3>Contact Details</h3>
-        {% if CONTACT_LOCATION %}
-        <div class="contact-item"><strong>Location:</strong> {{ CONTACT_LOCATION }}</div>
-        {% endif %}
-        {% if CONTACT_PHONE %}
-        <div class="contact-item"><strong>Phone:</strong> {{ CONTACT_PHONE }}</div>
-        {% endif %}
-        {% if CONTACT_EMAIL %}
-        <div class="contact-item"><strong>Email:</strong> <a href="mailto:{{ CONTACT_EMAIL }}">{{ CONTACT_EMAIL }}</a></div>
-        {% endif %}
+            <!-- Sidebar -->
+            <div class="sidebar-content space-y-2" style="flex: 1 1 30%; min-width: 250px;">
+                <!-- Profile Image -->
+                {% if PROFILE_IMAGE %}
+                <div class="bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border text-center">
+                    <img src="{{ SITEURL }}/{{ PROFILE_IMAGE }}" alt="{{ AUTHOR }}"
+                         class="rounded-full mx-auto mb-4 object-cover shadow-lg border-0">
+                    <h3 class="font-semibold text-resume-accent">{{ AUTHOR }}</h3>
+                    {% if CONTACT_LOCATION %}
+                    <p class="text-sm text-gray-600 mt-1">{{ CONTACT_LOCATION }}</p>
+                    {% endif %}
 
-        {% if SOCIAL_LINKS %}
-        <h3>Links</h3>
-        {% for name, url in SOCIAL_LINKS %}
-        <div class="contact-item"><a href="{{ url }}" target="_blank">{{ name }}</a></div>
-        {% endfor %}
-        {% endif %}
+                    {% for name, url in SOCIAL_LINKS %}
+                        <div>
+                            <a href="{{ url }}" target="_blank" class="content-link">
+                                {{ name }}
+                            </a>
+                        </div>
+                        {% endfor %}
+                </div>
+                {% endif %}
 
-        {% if TECHNOLOGIES %}
-        <h3>Technologies</h3>
-        <div class="contact-item">{{ TECHNOLOGIES }}</div>
-        {% endif %}
 
-        {% if LANGUAGES %}
-        <h3>Languages</h3>
-        {% for lang in LANGUAGES %}
-        <div class="contact-item">{{ lang }}</div>
-        {% endfor %}
-        {% endif %}
+                <!-- Technologies -->
+                {% if TECHNOLOGIES %}
+                <div class="bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border">
+                    <h3 class="font-bold text-resume-accent mb-4">
+                        Technologies
+                    </h3>
+                    <div class="space-y-2">
+                        {% for tech in TECHNOLOGIES %}
+                        <div class="flex items-center text-sm text-gray-700 py-1">
+                            {{ tech }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
 
-        {% if HOBBIES %}
-        <h3>Hobbies</h3>
-        <div class="contact-item">{{ HOBBIES }}</div>
-        {% endif %}
+                <!-- Languages -->
+                {% if LANGUAGES %}
+                <div class="bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border">
+                    <h3 class="font-bold text-resume-accent mb-4">
+                        Languages
+                    </h3>
+                    <div class="space-y-1">
+                        {% for lang in LANGUAGES %}
+                        <div class="text-sm text-gray-700">{{ lang }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Hobbies -->
+                {% if HOBBIES %}
+                <div class="bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border">
+                    <h3 class="font-bold text-resume-accent mb-4">
+                        Hobbies
+                    </h3>
+                    <div class="space-y-2">
+                        {% for hobby in HOBBIES %}
+                        <div class="flex items-center text-sm text-gray-700 py-1">
+                            {{ hobby }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -14,7 +14,7 @@ THEME = "resume"
 # Resume-specific settings
 PROFILE_TITLE = "Software Engineer"
 PROFILE_IMAGE = "images/profile.jpg"
-CONTACT_LOCATION = "Latvia"
+CONTACT_LOCATION = "Remote / Latvia"
 CONTACT_PHONE = ""
 CONTACT_EMAIL = ""
 
@@ -23,13 +23,25 @@ SOCIAL_LINKS = (
     ("GitHub", "https://github.com/peacefulseeker"),
 )
 
-TECHNOLOGIES = "Python/Django/DRF, JavaScript/React/TypeScript, Google Analytics/Console/Ads, Amazon Web Services, Ruby/Rails"
+TECHNOLOGIES = [
+    "Python/Django/DRF/FastAPI",
+    "RAG (LangChain, Azure AI Search)",
+    "JavaScript/React/Vue/TypeScript",
+    "AWS/Azure",
+    "Sentry/Grafana",
+]
 
 LANGUAGES = [
     "English", "Latvian", "Russian"
 ]
 
-HOBBIES = "Hiking/Trekking, Functional workouts & running, Playing Piano, Landscape photography, Reading books (physical)"
+HOBBIES = [
+    "Hiking/Trekking",
+    "Functional workouts & running",
+    "Playing Piano",
+    "Landscape photography",
+    "Reading books (physical)"
+]
 
 # Content settings - minimal configuration
 DISPLAY_PAGES_ON_MENU = False

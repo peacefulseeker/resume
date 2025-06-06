@@ -1,199 +1,318 @@
-/* Resume Theme CSS - based on CV HTML file */
-html {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Resume Theme CSS - Enhanced with Timeline and Tailwind Integration */
+
+/* Timeline Styles */
+.timeline-container {
+    position: relative;
+    margin-left: 2rem;
 }
 
-body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #2563eb, #64748b);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+.timeline-container h3 {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
 }
 
-h1 {
-    font-size: 2em;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.3em;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-/* Profile image */
-.profile-image {
-    text-align: center;
-    margin: 1.5em 0;
-}
-
-.profile-image img {
-    width: 150px;
-    height: 150px;
+.timeline-container h3::before {
+    content: '';
+    position: absolute;
+    left: -1.25rem;
+    top: 0.375rem;
+    width: 0.75rem;
+    height: 0.75rem;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #2563eb;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #2563eb;
+    z-index: 1;
 }
 
-/* Contact sidebar styling */
-.contact-sidebar {
-    background-color: #f9f9f9;
-    padding: 1em;
-    border-radius: 4px;
-    margin: 1em 0;
+.timeline-container h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.contact-sidebar h3 {
+.timeline-container ul {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.timeline-container li {
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.625;
+    position: relative;
+    list-style: disc;
+    margin-left: 1rem;
+}
+
+.timeline-container .tech-stack {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Employment item spacing */
+.timeline-container > h3:not(:first-child) {
+    margin-top: 3rem;
+}
+
+/* Extracurricular activities styling */
+.article-content h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.article-content h3:first-child {
     margin-top: 0;
-    margin-bottom: 0.5em;
-    font-weight: bold;
 }
 
-.contact-item {
-    margin: 0.5em 0;
+.article-content h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
 }
 
-/* Links */
-a {
-    color: #333;
-    text-decoration: none;
+.article-content p {
+    color: #374151;
+    line-height: 1.625;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
 }
 
-a:hover {
-    text-decoration: underline;
+.article-content a {
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    position: relative;
 }
 
-/* Lists */
-ul {
-    padding-left: 1.5em;
-    margin: 1em 0;
+.article-content a:hover {
+    color: #1e40af;
+    text-decoration-color: #2563eb;
+    transform: translateY(-1px);
 }
 
-li {
-    margin: 0.5em 0;
-    line-height: 1.4;
-}
-
-/* Tables */
-table {
-    border-collapse: collapse;
-    margin: 1em 0;
-    width: 100%;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-/* Figures */
-figure {
-    margin: 1.5em 0;
-    text-align: center;
-}
-
-figcaption {
-    color: #666;
-    font-style: italic;
-    margin-top: 0.5em;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Code blocks */
-pre {
-    background-color: #f6f8fa;
-    border-radius: 3px;
-    padding: 1em;
-    overflow: auto;
-}
-
-code {
-    font-family: monospace;
-    background-color: #f6f8fa;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-}
-
-pre code {
-    background-color: transparent;
-    padding: 0;
-}
-
-/* Tech stack styling */
-.tech-stack {
-    background-color: #f6f8fa;
-    padding: 0.5em 1em;
-    border-radius: 3px;
-    margin: 1em 0;
-    font-style: italic;
-    color: #666;
-    font-size: 0.9em;
-}
-
-/* Article content */
-.article-content {
-    margin-bottom: 2em;
-}
-
-/* Responsive design */
+/* Responsive timeline adjustments */
 @media (max-width: 768px) {
-    body {
-        padding: 1rem;
-        margin: 0;
+    .timeline-container {
+        margin-left: 1rem;
     }
 
+    .timeline-container::before {
+        left: -0.5rem;
+    }
+
+    .timeline-container h3 {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-container h3::before {
+        left: -0.75rem;
+    }
+
+    .timeline-container h4,
+    .timeline-container ul,
+    .timeline-container .tech-stack {
+        padding-left: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    .timeline-container ul {
+        list-style-position: inside;
+    }
+
+    .timeline-container li {
+        margin-left: 0.5rem;
+    }
+}
+
+
+/* Link hover effects and consistent styling */
+a:not(.no-underline) {
+    transition: all 0.2s ease-in-out;
+}
+
+a, .content-link {
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover, .content-link:hover {
+    color: #1e40af;
+    text-decoration-color: #2563eb;
+}
+
+/* Print Styles for PDF Generation */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: white !important;
+    }
+
+    .container {
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0.5in !important;
+    }
+
+    /* Force flexbox layout for PDF */
+    .flex.flex-wrap {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 1rem !important;
+    }
+
+    /* Main content area - 65% width */
+    .flex-1.min-w-0 {
+        flex: 0 0 65% !important;
+        max-width: 65% !important;
+        min-width: 65% !important;
+    }
+
+    /* Sidebar - 30% width */
+    .sidebar-content {
+        flex: 0 0 30% !important;
+        max-width: 30% !important;
+        min-width: 30% !important;
+    }
+
+    /* Remove shadows and rounded corners for print */
+    .shadow-sm,
+    .rounded-lg,
+    .rounded-full {
+        box-shadow: none !important;
+        border-radius: 4px !important;
+    }
+
+    /* Ensure good page breaks */
+    .bg-resume-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 0.5rem !important;
+        padding: 1rem !important;
+        border: 1px solid #e5e7eb !important;
+        background: white !important;
+    }
+
+    /* Typography adjustments for print */
     h1 {
-        font-size: 1.5em;
+        font-size: 24pt !important;
+        margin-bottom: 0.5rem !important;
     }
 
     h2 {
-        font-size: 1.3em;
-    }
-}
-
-/* Print styles */
-@media print {
-    html {
-        background-color: white;
+        font-size: 16pt !important;
+        margin-bottom: 0.75rem !important;
+        color: #1f2937 !important;
     }
 
-    body {
-        box-shadow: none;
-        padding: 0;
-        margin: 0;
+    h3 {
+        font-size: 14pt !important;
+        margin-bottom: 0.5rem !important;
     }
 
-    .contact-sidebar {
-        background-color: transparent;
-        border: 1px solid #ddd;
+    h4 {
+        font-size: 12pt !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    /* Timeline adjustments for print */
+    .timeline-container {
+        margin-left: 1rem !important;
+    }
+
+    .timeline-container::before {
+        left: -0.5rem !important;
+        background: #374151 !important;
+    }
+
+    .timeline-container h3::before {
+        left: -0.75rem !important;
+        background: #374151 !important;
+        border-color: white !important;
+        box-shadow: 0 0 0 1px #374151 !important;
+    }
+
+    /* Link styling for print */
+    a, .content-link {
+        color: #1f2937 !important;
+        text-decoration: underline !important;
+    }
+
+    /* Image adjustments */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Spacing adjustments */
+    .space-y-6 > * + * {
+        margin-top: 1rem !important;
+    }
+
+    .space-y-3 > * + * {
+        margin-top: 0.5rem !important;
+    }
+
+    .space-y-2 > * + * {
+        margin-top: 0.25rem !important;
+    }
+
+    /* Hide unnecessary elements for print */
+    .no-print {
+        display: none !important;
+    }
+
+    /* Ensure content doesn't break across pages inappropriately */
+    .timeline-container h3,
+    .timeline-container h4 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* Technology and skills lists */
+    .tech-stack {
+        column-count: 2;
+        column-gap: 1rem;
+        break-inside: avoid;
     }
 }
