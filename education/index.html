@@ -5,25 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - Alexey Vorobyov - Software Engineer</title>
     <meta name="description" content="Full Stack Developer with 6+ years of experience">
-    <link rel="stylesheet" type="text/css" href="https://peacefulseeker.github.io/resume/theme/css/resume.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'resume-primary': '#2563eb',
+                    'resume-secondary': '#64748b',
+                    'resume-accent': '#0f172a',
+                    'resume-bg': '#f8fafc',
+                    'resume-card': '#ffffff',
+                    'resume-border': '#e2e8f0'
+                },
+                fontFamily: {
+                    'sans': ['Inter', 'system-ui', 'sans-serif'],
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.5s ease-in-out',
+                    'slide-in': 'slideIn 0.3s ease-out'
+                }
+            }
+        },
+        plugins: []
+    }
+</script>    <link rel="stylesheet" type="text/css" href="https://peacefulseeker.github.io/resume/theme/css/resume.css">
 </head>
 <body>
     <main>
-<div class="resume">
-    <h1><a href="https://peacefulseeker.github.io/resume/">Alexey Vorobyov</a></h1>
+<div class="min-h-screen bg-resume-bg">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border">
+            <h1 class="text-3xl font-bold text-resume-accent mb-2">
+                <a href="https://peacefulseeker.github.io/resume" class="text-resume-primary hover:text-resume-accent transition-colors">Alexey Vorobyov</a>
+            </h1>
 
-    <article>
-        <h2>Education</h2>
-        <div class="article-content">
-            <h3>Bachelor, Riga Technical University, Riga</h3>
+            <article class="mt-8">
+                <h2 class="text-2xl font-bold text-resume-accent mb-6">Education</h2>
+                <div class="article-content text-gray-700 leading-relaxed">
+                    <h3>Bachelor, Riga Technical University, Riga</h3>
 <h4>2013 - 2016</h4>
-<p>Graduate paper: <a href="https://nda.rtu.lv/en/view/16218" target="_blank">https://nda.rtu.lv/en/view/16218</a></p>
-        </div>
-    </article>
+<p>Graduate paper: <a href="https://nda.rtu.lv/en/view/16218" target="_blank" class="content-link">https://nda.rtu.lv/en/view/16218</a></p>
+                </div>
+            </article>
 
-    <nav style="margin-top: 2em;">
-        <a href="https://peacefulseeker.github.io/resume/">&larr; Back to Resume</a>
-    </nav>
+            <nav class="mt-8 pt-6 border-t border-resume-border">
+                <a href="https://peacefulseeker.github.io/resume" class="inline-flex items-center text-resume-primary hover:text-resume-accent transition-colors">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Back to Resume
+                </a>
+            </nav>
+        </div>
+    </div>
 </div>
     </main>
 </body>
