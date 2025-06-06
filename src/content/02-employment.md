@@ -3,11 +3,11 @@ Date: 2024-01-02
 Category: resume
 Slug: employment
 
-### Software Engineer, Arvato Systes, Latvia/Hybrid
+### Software Engineer, Arvato Systems, Latvia/Hybrid
 
 #### DECEMBER 2024 - PRESENT
 
-- developed performant & scalable PDF parsing solution as Azure durable function for locating page number for certain text chunks
+- developed a performant and scalable PDF parsing solution as Azure durable function for locating page number for certain text chunks.
 - maintained and developed new features for API as a service for building RAG based flows.
 - in a FastAPI project reduced unit tests and integration tests execution time from 5 minutes to 2.5 through various optimizations such as pytest fixture scope, test containers setup, DB migrations execution time and code refactor.
 
