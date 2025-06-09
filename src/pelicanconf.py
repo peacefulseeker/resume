@@ -1,7 +1,7 @@
 # Basic settings
 AUTHOR = 'Alexey Vorobyov'
-SITENAME = 'Alexey Vorobyov - Software Engineer'
-SITESUBTITLE = 'Full Stack Developer with 6+ years of experience'
+SITENAME = "Full-Stack Software Engineer"
+SITE_DESCRIPTION = "Full-stack developer specializing in Python (Django/FastAPI) and JavaScript (React/Vue) with 7+ years of experience building scalable web applications and AI-powered solutions."
 SITEURL = ""
 
 PATH = "content"
@@ -15,8 +15,6 @@ THEME = "resume"
 PROFILE_TITLE = "Software Engineer"
 PROFILE_IMAGE = "images/profile.jpg"
 CONTACT_LOCATION = "Remote / Latvia"
-CONTACT_PHONE = ""
-CONTACT_EMAIL = ""
 
 SOCIAL_LINKS = (
     ("LinkedIn", "https://linkedin.com/in/alexey-vorobyov"),
@@ -40,7 +38,7 @@ HOBBIES = [
     "Functional workouts & running",
     "Playing Piano",
     "Landscape photography",
-    "Reading books (physical)"
+    "Reading books"
 ]
 
 # Content settings - minimal configuration
@@ -71,10 +69,5 @@ PAGE_SAVE_AS = '{slug}/index.html'
 DEFAULT_METADATA = {
     'status': 'published',
 }
-ARCHIVES_SAVE_AS = ''
-TAGS_SAVE_AS = ''
-CATEGORIES_SAVE_AS = ''
-AUTHORS_SAVE_AS = ''
-
 # Development settings
 RELATIVE_URLS = True

@@ -3,29 +3,27 @@
 {% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-resume-bg">
+<div class="bg-resume-bg">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <div class="bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border">
-            <h1 class="text-3xl font-bold text-resume-accent mb-2">
-                <a href="{{ SITEURL }}" class="text-resume-primary hover:text-resume-accent transition-colors">{{ AUTHOR }}</a>
-            </h1>
+        <h1 class="text-3xl font-bold text-resume-accent mb-2">
+            <a href="{{ SITEURL }}" class="text-resume-primary hover:text-resume-accent transition-colors">{{ AUTHOR }}</a>
+        </h1>
 
-            <article class="mt-8">
-                <h2 class="text-2xl font-bold text-resume-accent mb-6">{{ article.title }}</h2>
-                <div class="article-content text-gray-700 leading-relaxed">
-                    {{ article.content }}
-                </div>
-            </article>
+        <article class="mt-8">
+            <h2 class="text-2xl font-bold text-resume-accent mb-6">{{ article.title }}</h2>
+            <div class="article-content text-gray-700 leading-relaxed">
+                {{ article.content }}
+            </div>
+        </article>
 
-            <nav class="mt-8 pt-6 border-t border-resume-border">
-                <a href="{{ SITEURL }}" class="inline-flex items-center text-resume-primary hover:text-resume-accent transition-colors">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-                    </svg>
-                    Back to Resume
-                </a>
-            </nav>
-        </div>
+        <nav class="mt-8 pt-6 border-t border-resume-border">
+            <a href="{{ SITEURL }}" class="inline-flex items-center text-resume-primary hover:text-resume-accent transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Back to Resume
+            </a>
+        </nav>
     </div>
 </div>
 {% endblock %}
