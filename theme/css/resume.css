@@ -18,7 +18,7 @@
 
 .timeline-container h3 {
     position: relative;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #111827;
     margin-bottom: 0.5rem;
@@ -40,7 +40,7 @@
 }
 
 .timeline-container h4 {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #2563eb;
     margin-bottom: 0.75rem;
@@ -171,146 +171,38 @@ a:hover, .content-link:hover {
     text-decoration-color: #2563eb;
 }
 
-/* Print Styles for PDF Generation */
+.sidebar-content {
+    flex: 0 0 35%;
+}
+
 @media print {
-    * {
-        -webkit-print-color-adjust: exact !important;
-        color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    body {
-        font-size: 12pt;
-        line-height: 1.4;
-        color: #000;
-        background: white !important;
-    }
-
-    .container {
-        max-width: none !important;
-        margin: 0 !important;
-        padding: 0.5in !important;
-    }
-
-    /* Force flexbox layout for PDF */
-    .flex.flex-wrap {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        gap: 1rem !important;
-    }
-
-    /* Main content area - 65% width */
-    .flex-1.min-w-0 {
-        flex: 0 0 65% !important;
-        max-width: 65% !important;
-        min-width: 65% !important;
-    }
-
-    /* Sidebar - 30% width */
-    .sidebar-content {
-        flex: 0 0 30% !important;
-        max-width: 30% !important;
-        min-width: 30% !important;
-    }
-
-    /* Remove shadows and rounded corners for print */
-    .shadow-sm,
-    .rounded-lg,
-    .rounded-full {
-        box-shadow: none !important;
-        border-radius: 4px !important;
-    }
-
-    /* Ensure good page breaks */
-    .bg-resume-card {
-        page-break-inside: avoid;
-        break-inside: avoid;
-        margin-bottom: 0.5rem !important;
-        padding: 1rem !important;
-        border: 1px solid #e5e7eb !important;
-        background: white !important;
-    }
-
-    /* Typography adjustments for print */
-    h1 {
-        font-size: 24pt !important;
-        margin-bottom: 0.5rem !important;
-    }
-
-    h2 {
-        font-size: 16pt !important;
-        margin-bottom: 0.75rem !important;
-        color: #1f2937 !important;
-    }
-
-    h3 {
-        font-size: 14pt !important;
-        margin-bottom: 0.5rem !important;
-    }
-
-    h4 {
-        font-size: 12pt !important;
-        margin-bottom: 0.25rem !important;
-    }
-
-    /* Timeline adjustments for print */
     .timeline-container {
-        margin-left: 1rem !important;
+        margin-left: 0;
     }
 
-    .timeline-container::before {
-        left: -0.5rem !important;
-        background: #374151 !important;
-    }
-
-    .timeline-container h3::before {
-        left: -0.75rem !important;
-        background: #374151 !important;
-        border-color: white !important;
-        box-shadow: 0 0 0 1px #374151 !important;
-    }
-
-    /* Link styling for print */
-    a, .content-link {
-        color: #1f2937 !important;
-        text-decoration: underline !important;
-    }
-
-    /* Image adjustments */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    /* Spacing adjustments */
-    .space-y-6 > * + * {
-        margin-top: 1rem !important;
-    }
-
-    .space-y-3 > * + * {
-        margin-top: 0.5rem !important;
-    }
-
-    .space-y-2 > * + * {
-        margin-top: 0.25rem !important;
-    }
-
-    /* Hide unnecessary elements for print */
-    .no-print {
-        display: none !important;
-    }
-
-    /* Ensure content doesn't break across pages inappropriately */
+    .timeline-container,
     .timeline-container h3,
-    .timeline-container h4 {
-        page-break-after: avoid;
-        break-after: avoid;
+    .timeline-container h4,
+    .timeline-container .tech-stack {
+        padding-left: 0;
+        margin-left: 0;
     }
 
-    /* Technology and skills lists */
-    .tech-stack {
-        column-count: 2;
-        column-gap: 1rem;
-        break-inside: avoid;
+    .timeline-container ul {
+        padding-left: 0;
     }
+
+    .timeline-container::before,
+    .timeline-container h3::before {
+        display: none;
+    }
+
+    .article-content h3 {
+        box-shadow: none;
+    }
+    .resume-card {
+        box-shadow: none !important;
+    }
+
+    .sidebar-merged
 }
