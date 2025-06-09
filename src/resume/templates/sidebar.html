@@ -1,0 +1,66 @@
+<!-- Profile Image -->
+{% if PROFILE_IMAGE %}
+<div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-4 text-center">
+    <img src="{{ SITEURL }}/{{ PROFILE_IMAGE }}" alt="{{ AUTHOR }}"
+        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none">
+    <h3 class="font-semibold text-resume-accent print:hidden">{{ AUTHOR }}</h3>
+    {% if CONTACT_LOCATION %}
+    <p class="text-sm text-gray-600 mt-1">{{ CONTACT_LOCATION }}</p>
+    {% endif %}
+
+    {% for name, url in SOCIAL_LINKS %}
+    <div>
+        <a href="{{ url }}" target="_blank" class="content-link">
+            {{ name }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+
+<!-- Technologies -->
+{% if TECHNOLOGIES %}
+<div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-3">
+    <h3 class="font-bold text-resume-accent mb-4">
+        Technologies
+    </h3>
+    <div class="space-y-2">
+        {% for tech in TECHNOLOGIES %}
+        <div class="flex items-center text-sm text-gray-700">
+            {{ tech }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Languages -->
+{% if LANGUAGES %}
+<div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-3">
+    <h3 class="font-bold text-resume-accent mb-4">
+        Languages
+    </h3>
+    <div class="space-y-1">
+        {% for lang in LANGUAGES %}
+        <div class="text-sm text-gray-700">{{ lang }}</div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- Hobbies -->
+{% if HOBBIES %}
+<div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-3">
+    <h3 class="font-bold text-resume-accent mb-4">
+        Hobbies
+    </h3>
+    <div class="space-y-2">
+        {% for hobby in HOBBIES %}
+        <div class="flex items-center text-sm text-gray-700">
+            {{ hobby }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

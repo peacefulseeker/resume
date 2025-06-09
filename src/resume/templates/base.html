@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-    <meta name="description" content="{% block description %}{{ SITESUBTITLE or 'Professional Resume' }}{% endblock %}">
+    <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION or 'Professional Resume' }}{% endblock %}">
     <script src="https://cdn.tailwindcss.com"></script>
     {% include 'tailwind-config.html' %}
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/resume.css">
