@@ -38,8 +38,7 @@ HOBBIES = [
     "Functional workouts & running",
     "Playing Piano",
     "Landscape photography",
-    "Reading books",
-    "test"
+    "Reading books"
 ]
 
 # Content settings - minimal configuration
