@@ -118,46 +118,8 @@
     transform: translateY(-1px);
 }
 
-/* Responsive timeline adjustments */
-@media (max-width: 768px) {
-    .timeline-container {
-        margin-left: 1rem;
-    }
-
-    .timeline-container::before {
-        left: -0.5rem;
-    }
-
-    .timeline-container h3 {
-        padding-left: 1.5rem;
-    }
-
-    .timeline-container h3::before {
-        left: -0.75rem;
-    }
-
-    .timeline-container h4,
-    .timeline-container ul,
-    .timeline-container .tech-stack {
-        padding-left: 1.5rem;
-        margin-left: 1.5rem;
-    }
-
-    .timeline-container ul {
-        list-style-position: inside;
-    }
-
-    .timeline-container li {
-        margin-left: 0.5rem;
-    }
-}
-
 
 /* Link hover effects and consistent styling */
-a:not(.no-underline) {
-    transition: all 0.2s ease-in-out;
-}
-
 a, .content-link {
     color: #2563eb;
     font-weight: 500;
