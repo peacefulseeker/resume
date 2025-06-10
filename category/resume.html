@@ -36,19 +36,22 @@
     <main>
 <div class="bg-resume-bg">
     <div class="container mx-auto px-4 py-8 max-w-4xl print:p-0">
-        <div class="flex flex-wrap gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
             <!-- Main Content Area -->
-            <div class="flex-1 min-w-0 space-y-2">
+            <div class="md:col-span-2 space-y-2">
+
+
                 <!-- Header -->
                 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border print:p-4 print:border-0">
                     <h1 class="text-4xl font-bold text-resume-accent mb-2">Alexey Vorobyov</h1>
                     <p class="text-xl text-resume-secondary mb-4">Software Engineer</p>
 
                     <div class="hidden sidebar-merged space-x-1 flex my-4 print:flex">
-<!-- Profile Image -->
+<!-- Profile Image(show on larger screens and print) -->
+<div class="sidebar-profile max-md:hidden print:flex">
 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-4 text-center">
     <img src="https://peacefulseeker.github.io/resume/images/profile.jpg" alt="Alexey Vorobyov"
-        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none">
+        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none w-64">
     <h3 class="font-semibold text-resume-accent print:hidden">Alexey Vorobyov</h3>
     <p class="text-sm text-gray-600 mt-1">Remote / Latvia</p>
 
@@ -63,7 +66,7 @@
         </a>
     </div>
 </div>
-
+</div>
 
 <!-- Technologies -->
 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-3">
@@ -133,6 +136,27 @@
 Passionate about building resilient and customer-centric products in agile, collaborative environments, I am eager to leverage skills on high-impact projects and look forward to contributing to innovative solutions, learning from seasoned colleagues, and mentoring junior talent.</p>
                     </div>
 
+                </div>
+
+                <!-- Profile Image(show on mobile screen) -->
+                <div class="main-profile md:hidden print:hidden">
+<div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-4 text-center">
+    <img src="https://peacefulseeker.github.io/resume/images/profile.jpg" alt="Alexey Vorobyov"
+        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none w-64">
+    <h3 class="font-semibold text-resume-accent print:hidden">Alexey Vorobyov</h3>
+    <p class="text-sm text-gray-600 mt-1">Remote / Latvia</p>
+
+    <div>
+        <a href="https://linkedin.com/in/alexey-vorobyov" target="_blank" class="content-link">
+            LinkedIn
+        </a>
+    </div>
+    <div>
+        <a href="https://github.com/peacefulseeker" target="_blank" class="content-link">
+            GitHub
+        </a>
+    </div>
+</div>
                 </div>
 
                 <!-- Employment Timeline -->
@@ -238,10 +262,11 @@ Credential URL: <a href="https://aw.certmetrics.com/amazon/public/verification.a
 
             <!-- Sidebar -->
             <div class="sidebar-content space-y-2 print:hidden">
-<!-- Profile Image -->
+<!-- Profile Image(show on larger screens and print) -->
+<div class="sidebar-profile max-md:hidden print:flex">
 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-4 text-center">
     <img src="https://peacefulseeker.github.io/resume/images/profile.jpg" alt="Alexey Vorobyov"
-        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none">
+        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none w-64">
     <h3 class="font-semibold text-resume-accent print:hidden">Alexey Vorobyov</h3>
     <p class="text-sm text-gray-600 mt-1">Remote / Latvia</p>
 
@@ -256,7 +281,7 @@ Credential URL: <a href="https://aw.certmetrics.com/amazon/public/verification.a
         </a>
     </div>
 </div>
-
+</div>
 
 <!-- Technologies -->
 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-3">
