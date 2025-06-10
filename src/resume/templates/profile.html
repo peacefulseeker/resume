@@ -1,0 +1,17 @@
+<div class="resume-card bg-resume-card rounded-lg shadow-sm p-6 border border-resume-border print:p-4 text-center">
+    <img src="{{ SITEURL }}/{{ PROFILE_IMAGE }}" alt="{{ AUTHOR }}"
+        class="rounded-full mx-auto mb-4 shadow-lg border-0 print:shadow-none w-64">
+    <h3 class="font-semibold text-resume-accent print:hidden">{{ AUTHOR }}</h3>
+    {% if CONTACT_LOCATION %}
+    <p class="text-sm text-gray-600 mt-1">{{ CONTACT_LOCATION }}</p>
+    {% endif %}
+
+    {% for name, url in SOCIAL_LINKS %}
+    <div>
+        <a href="{{ url }}" target="_blank" class="content-link">
+            {{ name }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+

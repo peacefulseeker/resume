@@ -9,9 +9,11 @@
 {% block content %}
 <div class="bg-resume-bg">
     <div class="container mx-auto px-4 py-8 max-w-4xl print:p-0">
-        <div class="flex flex-wrap gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
             <!-- Main Content Area -->
-            <div class="flex-1 min-w-0 space-y-2">
+            <div class="md:col-span-2 space-y-2">
+
+
                 <!-- Header -->
                 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border print:p-4 print:border-0">
                     <h1 class="text-4xl font-bold text-resume-accent mb-2">{{ AUTHOR }}</h1>
@@ -28,6 +30,13 @@
                     {% endif %}
 
                 </div>
+
+                <!-- Profile Image(show on mobile screen) -->
+                {% if PROFILE_IMAGE %}
+                <div class="main-profile md:hidden print:hidden">
+                    {% include 'profile.html' %}
+                </div>
+                {% endif %}
 
                 <!-- Employment Timeline -->
                 {% if employment %}
