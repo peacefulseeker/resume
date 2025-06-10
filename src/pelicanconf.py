@@ -17,7 +17,7 @@ PROFILE_IMAGE = "images/profile.jpg"
 CONTACT_LOCATION = "Remote / Latvia"
 
 SOCIAL_LINKS = (
-    ("LinkedIn", "https://linkedin.com/in/alexey-vorobyov"),
+    ("LinkedIn", "https://www.linkedin.com/in/vorobyovalexey/"),
     ("GitHub", "https://github.com/peacefulseeker"),
 )
 
