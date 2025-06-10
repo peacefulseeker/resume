@@ -40,5 +40,16 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        uv run ghp-import -m "Update resume - $(date)" -b gh-pages src/output --no-jekyll
+
+        chmod +x scripts/generate-deploy-message.sh
+
+        # Get the commit message from the script
+        DEPLOY_MSG=$(./scripts/generate-deploy-message.sh)
+
+        if [ -z "$DEPLOY_MSG" ]; then
+          DEPLOY_MSG="[NO-OP] Resume deployment at $(date +'%Y-%m-%d %H:%M:%S')"
+        fi
+
+        echo "Using deploy message: $DEPLOY_MSG"
+        uv run ghp-import -m "$DEPLOY_MSG" -b gh-pages src/output --no-jekyll
         git push origin gh-pages
