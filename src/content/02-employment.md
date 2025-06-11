@@ -1,7 +1,5 @@
 Title: Employment History
-Date: 2024-01-02
-Category: resume
-Slug: employment
+id: employment
 
 ### Software Engineer, Arvato Systems, Latvia/Hybrid
 

@@ -1,7 +1,5 @@
 Title: Professional Summary
-Date: 2024-01-01
-Category: resume
-Slug: summary
+id: summary
 
 A strategic full-stack developer with over 7 years of experience in software engineering, specializing in building and maintaining robust SaaS applications across both monolithic and microservices architectures. My technical expertise spans multiple languages and frameworks, including PHP, JavaScript, Ruby, and Python — with Python being my language of choice for development work in most recent years.
 <br/>
