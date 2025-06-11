@@ -25,4 +25,4 @@ Coursera profile page: <a href="https://www.coursera.org/user/24d401e1022bf7551a
 
 #### JANUARY 2021 - NOVEMBER 2021
 
-Enhancing my Python skills on the wonderful PyBites platform. Here is my Ninja profile page: <a href="https://codechalleng.es/profiles/peacefulseeker" target="_blank" class="content-link">https://codechalleng.es/profiles/peacefulseeker</a>
+Enhancing my Python skills on the wonderful PyBites platform. Here is my Ninja profile page: <a href="https://codechalleng.es/profiles/peacefulseeker" target="_blank" class="content-link">link</a>
