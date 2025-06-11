@@ -74,7 +74,7 @@
 }
 
 /* Employment item spacing */
-.timeline-container > h3:not(:first-child) {
+.timeline-container>h3:not(:first-child) {
     margin-top: 2rem;
 }
 
@@ -120,7 +120,8 @@
 
 
 /* Link hover effects and consistent styling */
-a, .content-link {
+a,
+.content-link {
     color: #2563eb;
     font-weight: 500;
     font-size: 0.875rem;
@@ -131,7 +132,8 @@ a, .content-link {
     overflow-wrap: break-word;
 }
 
-a:hover, .content-link:hover {
+a:hover,
+.content-link:hover {
     color: #1e40af;
     text-decoration-color: #2563eb;
 }
@@ -165,9 +167,20 @@ a:hover, .content-link:hover {
     .article-content h3 {
         box-shadow: none;
     }
+
     .resume-card {
         box-shadow: none !important;
     }
 
-    .sidebar-merged
+    .page-break-before {
+        page-break-before: always;
+    }
+
+    .page-break-after {
+        page-break-after: always;
+    }
+
+    .page-break-avoid {
+        page-break-inside: avoid;
+    }
 }
