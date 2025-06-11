@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
-{% set summary = (articles|selectattr('slug', 'equalto', 'summary')|list)[0] %}
-{% set employment = (articles|selectattr('slug', 'equalto', 'employment')|list)[0] %}
-{% set other_articles = articles|rejectattr('slug', 'in', ['summary', 'employment'])|list %}
+{% set summary = (articles|selectattr('id', 'equalto', 'summary')|list)[0] %}
+{% set employment = (articles|selectattr('id', 'equalto', 'employment')|list)[0] %}
+{% set other_articles = articles|rejectattr('id', 'in', ['summary', 'employment'])|list %}
 
 {% block title %}{{ AUTHOR }} - {{ SITENAME }}{% endblock %}
 
@@ -53,14 +53,12 @@
                 <!-- Other Sections -->
                 {% for article in other_articles %}
                 <div class="resume-card bg-resume-card rounded-lg shadow-sm p-8 border border-resume-border print:p-4 print:border-0">
-                    {% if article.category.name != 'hidden' %}
                     <h2 class="text-2xl font-bold text-resume-accent mb-6">
                         {{ article.title }}
                     </h2>
                     <div class="article-content text-gray-700">
                         {{ article.content }}
                     </div>
-                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
