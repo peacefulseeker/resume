@@ -1,7 +1,5 @@
 Title: Extra-curricular activities
-Date: 2024-01-04
-Category: resume
-Slug: extracurricular
+id: extracurricular
 
 ### Microsoft Certified: Azure Fundamentals
 

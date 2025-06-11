@@ -1,4 +1,3 @@
-# Basic settings
 AUTHOR = 'Alexey Vorobyov'
 SITENAME = "Full-Stack Software Engineer"
 SITE_DESCRIPTION = "Full-stack developer specializing in Python (Django/FastAPI) and JavaScript (React/Vue) with 7+ years of experience building scalable web applications and AI-powered solutions."
@@ -41,33 +40,31 @@ HOBBIES = [
     "Reading books"
 ]
 
-# Content settings - minimal configuration
+# Content settings - minimal configuration, not needed for a resume site
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 DEFAULT_PAGINATION = False
 
-# Disable feeds - not needed for a resume site
+# Disable feeds -
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Disable archives, tags, categories pages
+# Disable subpages
+ARCHIVE_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
+TAG_SAVE_AS = ''
 TAGS_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
 AUTHORS_SAVE_AS = ''
+ARTICLE_URL = ''
+ARTICLE_SAVE_AS = ''
 
-# Clean URLs
-ARTICLE_URL = '{slug}/'
-ARTICLE_SAVE_AS = '{slug}/index.html'
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
-
-# Sort articles by filename for proper ordering
 DEFAULT_METADATA = {
-    'status': 'published',
+    'date': '2000-01-01', # A fixed date far in the past, required for Pelican to generate the site without errors
 }
-# Development settings
-RELATIVE_URLS = True
+ARTICLE_ORDER_BY = 'basename' # Order articles by filename

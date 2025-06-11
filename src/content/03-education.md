@@ -1,7 +1,5 @@
 Title: Education
-Date: 2024-01-03
-Category: resume
-Slug: education
+id: education
 
 ### Bachelor, Riga Technical University, Riga
 
