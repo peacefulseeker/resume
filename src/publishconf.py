@@ -11,6 +11,8 @@ from pelicanconf import *
 SITEURL = "https://peacefulseeker.github.io/resume"
 RELATIVE_URLS = False
 
+UMAMI_ENABLED = True # umami analytics
+
 # FEED_ALL_ATOM = "feeds/all.atom.xml"
 # CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 

@@ -13,6 +13,8 @@ Slug: employment
 
 <div class="tech-stack">Tech used: Python, FastAPI, Pydantic, Azure Cloud, AI & LLM tools, libraries</div>
 
+<div class="page-break-before"></div>
+
 ### Software Engineer, FinTech, Latvia/Hybrid
 
 #### APRIL 2024 - JULy 2024
@@ -37,6 +39,8 @@ Slug: employment
 - Supported micro-services stack modernization, like upgrading services from the deprecated python2.7 version or moving the python packages CI/CD pipelines to GitHub Actions from Jenkins.
 
 <div class="tech-stack">Tech used: Python/Django, React/Typescript, AWS S3, RDS PostgreSQL, Automation Tests(Java/Gherkin), Grafana, Google Tools</div>
+
+<div class="page-break-before"></div>
 
 ### Software Engineer, Infogram, Riga
 

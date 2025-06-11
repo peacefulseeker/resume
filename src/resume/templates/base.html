@@ -6,7 +6,9 @@
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION or 'Professional Resume' }}{% endblock %}">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="334171e2-2119-466d-a803-cc4468fed467"></script>
+    {% if UMAMI_ENABLED %}
+    <script async src="https://umami.is/script.js" data-website-id="{{ UMAMI_WEBSITE_ID }}"></script>
+    {% endif %}
     {% include 'tailwind-config.html' %}
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/resume.css">
     {% block extra_head %}{% endblock %}
