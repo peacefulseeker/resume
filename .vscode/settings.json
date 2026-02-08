@@ -1,7 +1,4 @@
 {
-    "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:claude-sonnet-4",
-    "gitlens.ai.generateCommitMessage.customInstructions": "Make sure to include changes in the bullet points(use hyphen symbol for that), and use a clear and concise format.",
     "[markdown]": {
         "editor.rulers": [
             120
