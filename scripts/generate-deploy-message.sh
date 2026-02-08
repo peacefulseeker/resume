@@ -26,6 +26,10 @@ else
   DEPLOY_MSG="Deploy: ${COMMIT_MSG} (${COMMIT_HASH}, by ${COMMIT_AUTHOR})"
 fi
 
+# Sanitize message to prevent command injection
+# Remove backticks, $(), and other shell metacharacters
+DEPLOY_MSG=$(echo "$DEPLOY_MSG" | tr -d '`$' | sed 's/[()]//g')
+
 # Check if message is empty and provide fallback if needed
 if [ -z "$DEPLOY_MSG" ]; then
   echo "Deploy: Update resume (${COMMIT_HASH}, by ${COMMIT_AUTHOR})"
