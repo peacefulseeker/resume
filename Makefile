@@ -1,5 +1,5 @@
 PY?=
-PELICAN?=pelican
+PELICAN?=uv run pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)/src
@@ -41,7 +41,7 @@ dev:
 	cd "$(BASEDIR)" && "$(PELICAN)" -l --autoreload "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 github: build
-	ghp-import -m "$(GITHUB_PAGES_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)" --no-jekyll
+	uv run ghp-import -m "$(GITHUB_PAGES_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)" --no-jekyll
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 
