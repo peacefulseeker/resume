@@ -1,15 +1,15 @@
 [project]
 name = "resume"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Personal resume"
 readme = "README.md"
-requires-python = ">=3.12.9"
+requires-python = "==3.13.12"
 dependencies = [
     "pelican[markdown]>=4.11.0",
     "ghp-import>=2.1.0",
-    "invoke>=2.2.0",
+    "invoke>=2.2.1",
 ]
 
 
 [tool.uv]
-required-version = ">=0.6.0"
+required-version = ">=0.10.0"
