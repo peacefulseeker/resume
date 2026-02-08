@@ -19,6 +19,10 @@ default:
 build:
     cd {{basedir}} && {{pelican}} {{inputdir}} -o {{outputdir}} -s {{publishconf}}
 
+# Open the built site in browser
+open:
+    open {{outputdir}}/index.html
+
 # Clean output directory
 clean:
     rm -rf {{outputdir}}
