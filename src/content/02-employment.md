@@ -1,15 +1,15 @@
 Title: Employment History
 id: employment
 
-### Senior Software Engineer (B2B Consultant), Healthtech Startup, Remote
+### Senior Software Engineer (B2B), Healthtech Startup, Remote
 
 #### October 2025 - Present
 
-- Contribute to a FastAPI-based payment calculation service that automates monthly capitation payment processing for healthcare organizations, improving payment accuracy and reducing manual reconciliation time.
-- Collaborate with client engineers in migrating from legacy systems to modern service-based architecture, ensuring seamless transition and data integrity throughout the modernization process.
-- Contribute as a full-stack engineer, delivering end-to-end features from API development to client-facing views, including both internal admin interfaces and public-facing portals.
-- Design and implement RESTful API endpoints for generating detailed service statements and payment reports, enabling transparent financial tracking for healthcare providers.
-- Contribute to authentication service initiatives, including.
+- Contributed to a FastAPI-based payment calculation service that automates monthly capitation payment processing for healthcare organizations, improving payment accuracy and reducing manual reconciliation time.
+- Collaborated with client engineers in migrating from legacy systems to modern service-based architecture, ensuring seamless transition and data integrity throughout the modernization process.
+- Contributed as a full-stack engineer, delivering end-to-end features from API development to client-facing views, including both internal admin interfaces and public-facing portals.
+- Designed and implemented RESTful API endpoints for generating detailed service statements and payment reports, enabling transparent financial tracking for healthcare providers.
+- Contributed to authentication service initiatives, including.
 
 <div class="tech-stack">Tech used: Python, FastAPI, Pydantic, SQLAlchemy, React, TypeScript, Node.js/Fastify, TanStack & Turborepo, PostgreSQL, AWS & Terraform, Docker, OpenTelemetry</div>
 
@@ -18,9 +18,9 @@ id: employment
 
 #### DECEMBER 2024 - October 2025
 
-- developed ChatGPT-like RAG (retrieval-augmented generation) application for enterprise customers, which allows them to build AI-powered applications on top of their data, such as knowledge bases, documents, or databases, thinking about performance, security, and cost-efficiency of the solution.
-- developed a performant and scalable PDF parsing solution as Azure durable function for locating page number for certain text chunks.
-- maintained and developed new features for API as a service for building RAG based flows.
+- Developed ChatGPT-like RAG (retrieval-augmented generation) application for enterprise customers, which allows them to build AI-powered applications on top of their data, such as knowledge bases, documents, or databases, thinking about performance, security, and cost-efficiency of the solution.
+- Developed a performant and scalable PDF parsing solution as Azure durable function for locating page number for certain text chunks.
+- Maintained and developed new features for API as a service for building RAG based flows.
 
 <div class="tech-stack">Tech used: Python, FastAPI, Pydantic, Azure Cloud, AI & LLM tools, libraries</div>
 
