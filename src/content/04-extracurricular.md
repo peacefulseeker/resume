@@ -1,18 +1,19 @@
 Title: Extra-curricular activities
 id: extracurricular
 
+### AWS Certified Cloud Practitioner, AWS Training & Certification
+
+#### DECEMBER 2022 - DECEMBER 2028
+
+Credential ID: K2EV8P3CS2B410WR <br/>
+Credential URL: <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/K2EV8P3CS2B410WR" target="_blank" class="content-link">link</a>
+
 ### Microsoft Certified: Azure Fundamentals
 
 #### MAY 2025 - &#8734;
 
 Credential URL: <a href="https://learn.microsoft.com/api/credentials/share/en-gb/alebyov/19158BE66DF6497F?sharingId" target="_blank" class="content-link">link</a> <br/>
 
-### AWS Certified Cloud Practitioner, AWS Training & Certification
-
-#### DECEMBER 2022 - DECEMBER 2025
-
-Credential ID: K2EV8P3CS2B410WR <br/>
-Credential URL: <a href="https://aw.certmetrics.com/amazon/public/verification.aspx" target="_blank" class="content-link">link</a>
 
 ### Various Tech Courses, Udemy/Coursera
 

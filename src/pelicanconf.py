@@ -1,6 +1,6 @@
 AUTHOR = 'Alexey Vorobyov'
-SITENAME = "Full-Stack Software Engineer"
-SITE_DESCRIPTION = "Full-stack developer specializing in Python (Django/FastAPI) and JavaScript (React/Vue) with 7+ years of experience building scalable web applications and AI-powered solutions."
+SITENAME = "Senior Software Engineer"
+SITE_DESCRIPTION = "Senior full-stack engineer specializing in Python (FastAPI, Django) and JavaScript (React, Vue) with 7+ years of experience building scalable web applications and AI-powered solutions."
 SITEURL = ""
 
 PATH = "content"
@@ -11,7 +11,7 @@ DEFAULT_LANG = 'en'
 THEME = "resume"
 
 # Resume-specific settings
-PROFILE_TITLE = "Software Engineer"
+PROFILE_TITLE = "Senior Software Engineer"
 PROFILE_IMAGE = "images/profile.jpg"
 CONTACT_LOCATION = "Remote / Latvia"
 
@@ -21,11 +21,10 @@ SOCIAL_LINKS = (
 )
 
 TECHNOLOGIES = [
-    "Python/Django/DRF/FastAPI",
-    "RAG (LangChain, Azure AI Search)",
-    "JavaScript/React/Vue/TypeScript",
-    "AWS/Azure",
-    "Sentry/Grafana",
+    "Python, FastAPI, SQLAlchemy",
+    "JS/TS, React, Node.js",
+    "AWS, Azure, Terraform",
+    "Sentry, Grafana, Opentelemetry",
 ]
 
 LANGUAGES = [
@@ -68,3 +67,7 @@ DEFAULT_METADATA = {
     'date': '2000-01-01', # A fixed date far in the past, required for Pelican to generate the site without errors
 }
 ARTICLE_ORDER_BY = 'basename' # Order articles by filename
+
+# SERVER
+BIND='localhost'
+PORT=8123
